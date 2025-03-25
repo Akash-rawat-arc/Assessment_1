@@ -30,3 +30,24 @@ let first_second = (first, second) =>
 
 let ans = first_second("Akash", "Rawat");
 console.log(ans);
+
+// Q3 
+
+function getData(uId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Fetched the data!");
+            resolve("skc@gmail.com");
+            }, 4000);
+    });
+}
+
+async function correctFunction() {
+
+    console.log("start");
+    let email = await getData("skc");
+    console.log("Email id of the user id is: " + email);
+    console.log("end");
+}
+
+correctFunction(); 
